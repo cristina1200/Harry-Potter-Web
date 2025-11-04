@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Harry Potter - Wizard Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+
+<!-- Hogwarts title thing -->
+
+<body>
+    <header>
+        <h1>Hogwarts School of Witchcraft and Wizardry</h1>
+        <h2 id="welcomeHeader" style="display: none; margin-top: 10px; font-size: 24px;"></h2>
+    </header>
+
+    <div class="main-container">
+        <div class="form-container">
+            <h2>Wizard Registration Form</h2>
+
+            <form id="registrationForm">
+                <div class="form-group">
+                    <input type="text" id="wizardName" name="wizardName" placeholder="Wizard/Witch Name">
+                    <div class="error-message" id="nameError">Name must be at least 3 characters long</div>
+
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <div class="error-message" id="emailError">Please enter a valid email address</div>
+
+                    <input type="password" id="password" name="password" placeholder="Password (min 8 chars, 1 number)">
+                    <div class="error-message" id="passwordError">Password must be at least 8 characters long and
+                        contain at least one number</div>
+
+                    <select id="house" name="house">
+                        <option value="">Select House</option>
+                    </select>
+                    <div class="error-message" id="houseError">Please select a house</div>
+
+                    <input type="submit" value="Register">
+                </div>
+            </form>
+
+            <div class="login-section" id="loginSection">
+                <h3>Verify Your Identity</h3>
+                <div class="form-group">
+                    <label for="loginPassword">Enter your password:</label>
+                    <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password">
+                    <div class="error-message" id="loginError">Incorrect password</div>
+                    <button id="loginButton">Login</button>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+        <div class="books-section" id="booksSection" style="display: none;">
+            <h2>Harry Potter Book Collection</h2>
+            <div class="books-grid" id="booksGrid">
+
+            </div>
+        </div>
+
+        <!-- Duels spells-->
+        <div class="duels-section" id="duelsSection" style="display: none;">
+            <h2>Duels</h2>
+
+            <div class="duel-controls">
+                <button id="startDuelBtn">Start Duel</button>
+                <button id="nextRoundBtn" style="display:none;">Next Round</button>
+                <button id="endDuelBtn" style="display:none;">End Duel</button>
+            </div>
+
+
+            <div class="duel-area" id="duelArea" style="display:none;">
+                <div class="duel-player">
+                    <h3>You</h3>
+                    <div id="playerSpell" class="spell-card"></div>
+                </div>
+
+                <p class="duel-vs">VS</p>
+
+                <div class="duel-opponent">
+                    <h3>Opponent</h3>
+                    <div id="opponentSpell" class="spell-card"></div>
+                </div>
+            </div>
+
+
+        </div>
+</body>
+
+</html>

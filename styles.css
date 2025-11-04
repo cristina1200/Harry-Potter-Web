@@ -1,0 +1,276 @@
+body {
+    font-family: 'Arial';
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+
+    /* background stuff */
+    background-image: url('wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: rgba(74, 0, 114, 0.9);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #ddd;
+}
+
+/* wizzard registration form */
+.form-container h2 {
+    color: #4a0072;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/*for all inputs*/
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    width: auto;
+    padding: 10px;
+    background-color: #4a0072;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/*when u click in the box*/
+input:focus, select:focus {
+    outline: none;
+    border-color: #4a0072;
+}
+
+.error-message {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+    display: none;
+}
+
+button {
+    background-color: #4a0072;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-section {
+    display: none;
+    margin-top: 20px;
+}
+
+/*to enable the other register stuff*/
+.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+
+.books-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+.books-section h2 {
+    color: #4a0072;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    align-items: stretch;
+}
+
+.book-card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    height: 100%;
+}
+
+.book-card .book-cover {
+    width: 100%;
+    text-align: center;
+}
+
+.book-card .book-cover img {
+    width: 180px;
+    height: 270px;
+    object-fit: cover;
+}
+
+.book-card h3 {
+    color: #4a0072;
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-size: 19px;
+    min-height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.book-description {
+    text-align: justify;
+    line-height: 1.5;
+    margin: 10px 0;
+    font-size: 15px;
+    color: #444;
+}
+
+/* all book details */
+.book-card p {
+    margin: 5px 0;
+    color: #666;
+    text-align: left;
+}
+
+/* Duels */
+.duels-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+.duels-section h2 {
+    color: #4a0072;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.duel-controls {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.duel-controls button {
+    background: #4a0072;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#nextRoundBtn, #endDuelBtn {
+    display: none;
+}
+
+.duel-area {
+    display: none;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.duel-player, .duel-opponent {
+    flex: 1;
+    max-width: 400px;
+}
+
+.duel-player h3, .duel-opponent h3 {
+    color: #4a0072;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.duel-vs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    text-align: center;
+    color: #4a0072;
+    font-size: 24px;
+}
+
+.spell-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    min-height: 150px;
+    background: white;
+    margin-top: 10px;
+}
+
+.spell-name {
+    color: #4a0072;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.spell-desc {
+    color: #333;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+ 
